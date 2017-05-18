@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- encoding: utf-8 -*-
 
-
-
+from __future__ import print_function
+from __future__ import division
 
 import os
 import sys
@@ -68,8 +68,8 @@ def draw_panel(cb, pool, params, plane):
     missing_coords = []
 
     # Check for coordinates that have no value in current plane
-    xs = list(range(params.plane_x0, params.plane_x0 + params.plane_w - 1))
-    ys = list(range(params.plane_y0, params.plane_y0 + params.plane_h - 1))
+    xs = range(params.plane_x0, params.plane_x0 + params.plane_w - 1)
+    ys = range(params.plane_y0, params.plane_y0 + params.plane_h - 1)
     for x in xs:
         for y in ys:
             if plane[x, y] is None:
@@ -262,12 +262,12 @@ def save(params):
         import pickle
         cPickle = pickle
     else:
-        import pickle
+        import cPickle
     ts = datetime.datetime.fromtimestamp(time.time()).strftime("%Y-%m-%d_%H-%M-%S")
     if not os.path.exists("saves/"):
         os.makedirs("saves/")
     with open("saves/almonds_%s.params" % ts, "wb") as f:
-        pickle.dump(params, f)
+        cPickle.dump(params, f)
         params.log("Current scene saved!")
 
 
@@ -402,10 +402,10 @@ def main(pool, ratio, qwertz, savefile):
                 import pickle
                 cPickle = pickle
             else:
-                import pickle
+                import cPickle
 
             with open(path, "rb") as f:
-                params = pickle.load(f)
+                params = cPickle.load(f)
                 params.log = log
                 log("Save loaded!")
                 return params

@@ -286,7 +286,7 @@ def _str2hex(hexstr):
 def _create_dicts():
     short2rgb_dict = dict(CLUT)
     rgb2short_dict = {}
-    for k, v in list(short2rgb_dict.items()):
+    for k, v in short2rgb_dict.items():
         rgb2short_dict[v] = k
     return rgb2short_dict, short2rgb_dict
 

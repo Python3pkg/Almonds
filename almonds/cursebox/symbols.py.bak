@@ -6,23 +6,23 @@ import sys
 from ..utils import is_native_windows
 
 UTF8_SYMBOLS = {
-    "BOX_TOP_LEFT"    : "┌",
-    "BOX_TOP_RIGHT"   : "┐",
-    "BOX_BOTTOM_LEFT" : "└",
-    "BOX_BOTTOM_RIGHT": "┘",
-    "BOX_HORIZONTAL"  : "─",
-    "BOX_VERTICAL"    : "│",
-    "BOX_X_LEFT"      : "├",
-    "BOX_X_RIGHT"     : "┤",
-    "BOX_X_TOP"       : "┬",
-    "BOX_X_BOTTOM"    : "┴",
-    "BOX_X_MIDDLE"    : "┼",
-    "DITHER_1"        : "█▓▒░ ",
-    "DITHER_2"        : "#&X$x=+;:,. ",
-    "ARROW_UP"        : "↑",
-    "ARROW_DOWN"      : "↓",
-    "ARROW_LEFT"      : "←",
-    "ARROW_RIGHT"     : "→"
+    "BOX_TOP_LEFT"    : u"┌",
+    "BOX_TOP_RIGHT"   : u"┐",
+    "BOX_BOTTOM_LEFT" : u"└",
+    "BOX_BOTTOM_RIGHT": u"┘",
+    "BOX_HORIZONTAL"  : u"─",
+    "BOX_VERTICAL"    : u"│",
+    "BOX_X_LEFT"      : u"├",
+    "BOX_X_RIGHT"     : u"┤",
+    "BOX_X_TOP"       : u"┬",
+    "BOX_X_BOTTOM"    : u"┴",
+    "BOX_X_MIDDLE"    : u"┼",
+    "DITHER_1"        : u"█▓▒░ ",
+    "DITHER_2"        : u"#&X$x=+;:,. ",
+    "ARROW_UP"        : u"↑",
+    "ARROW_DOWN"      : u"↓",
+    "ARROW_LEFT"      : u"←",
+    "ARROW_RIGHT"     : u"→"
 }
 
 CP437_SYMBOLS = {

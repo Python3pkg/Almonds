@@ -83,4 +83,4 @@ def range(*args, **kwargs):
         import builtins
         return builtins.range(*args, **kwargs)
     else:
-        return range(*args, **kwargs)
+        return xrange(*args, **kwargs)
